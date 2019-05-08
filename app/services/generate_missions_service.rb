@@ -11,7 +11,7 @@ class GenerateMissionsService
 
     # Cleaning mission called checkout_checkin at the end of each reservation
     #   UNLESS there is already a last_checkout at the same date
-    return if @reservatio.nil?
+    return if @reservation.nil?
     return if @reservation&.listing&.has_a_cleaning_mission_at?(@reservation.end_date)
 
     # create missions from reservation

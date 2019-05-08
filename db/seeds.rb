@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+input = eval(File.read(Rails.root.join('db_seeds', 'backend_test.rb')))
+
+input[:listings].each do |listing|
+  Listing.create(listing.except(:id))
+end
+
+input[:bookings].each do |booking|
+  booking_obj = Booking.create(booking.except(:id))
+end
+
+input[:reservations].each do |reservation|
+  reservation_obj = Reservation.create(reservation.except(:id))
+end
+
