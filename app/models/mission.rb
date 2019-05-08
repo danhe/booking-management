@@ -1,0 +1,14 @@
+class Mission < ApplicationRecord
+  belongs_to :listing
+
+  # Different prices by type of mission
+  PRICES = {
+    FirstCheckin: 10,
+    CheckoutCheckin: 10,
+    LastCheckout: 5
+  }
+
+  def self.get_price_by_type(type)
+    PRICES[type.to_sym]
+  end
+end
