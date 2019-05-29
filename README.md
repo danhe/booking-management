@@ -2,9 +2,9 @@
 
 # Getting started
 
-1. Clone the project and Change directory to `hostnfly`. Install all gems:
+1. Clone the project and Change directory to `booking-management`. Install all gems:
 ```
-    $ cd hostnfly
+    $ cd booking-management
     $ bundle install
 ```
 2. Start the web server:
